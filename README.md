@@ -44,4 +44,6 @@ SoundWave is a web application that allows users to listen to various songs cura
 ### Code Snippets
 
 ### Wiki Pages
-#### [Database Schema]
+#### [Database Schema](https://github.com/vmeduri1/soundWave/wiki/Database-Schema)
+<img src="https://dbdiagram.io/d/6083553cb29a09603d11e8ea" alt="soundWave" height="300">
+
