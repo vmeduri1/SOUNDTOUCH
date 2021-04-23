@@ -1,7 +1,8 @@
-import React, { useSState } from 'react';
+import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
-import { useDisspatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import './LoginForm.css';
 
 function LoginFormPage() {
     const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function LoginFormPage() {
     }
 
     return (
-        <form onSubmit={handlSubmit}>
+        <form className="login-form" onSubmit={handleSubmit}>
             <ul>
                 {errors.map((error, idx) => <li key={idx}>{error}</li>)}
             </ul>
