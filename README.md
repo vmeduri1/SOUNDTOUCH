@@ -1,8 +1,8 @@
-# Welcome to SoundPop
-SoundPop is a web application that allows users to listen to songs POPS!!, in order to discover new music, or listen to old music. The site is meant to authenticate good music and keep the good vibes going. This site was inspired by [SoundCloud](https://soundcloud.com/), where individuals can search for songs, stream music, make playlists, comment on songs, and upload music.
+# Welcome to SoundTouch
+SoundPop is a web application that allows users to listen to songs that touch, in order to discover new music, or listen to old music. The site is meant to authenticate good music and keep the good vibes going. This site was inspired by [SoundCloud](https://soundcloud.com/), where individuals can search for songs, stream music, make playlists, comment on songs, and upload music.
 #### Live link: 
 
-***
+*** 
 
 ### Index
 [Technologies](#technologies)
