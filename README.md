@@ -45,7 +45,7 @@ SoundTouch is a web application that allows users to listen to songs that touch,
 
 ### Wiki Pages
 #### [Database Schema](https://github.com/vmeduri1/soundWave/wiki/Database-Schema)
-<img width="270" alt="Screen Shot 2021-04-25 at 3 00 19 PM" src="https://user-images.githubusercontent.com/71046664/116007794-18597680-a5d7-11eb-9c7a-874549224470.png">
+<img width="312" alt="Screen Shot 2021-04-25 at 5 30 55 PM" src="https://user-images.githubusercontent.com/71046664/116011761-4eedbc00-a5ec-11eb-8c00-61aa3783afcd.png">
 
 
 
