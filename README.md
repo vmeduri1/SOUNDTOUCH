@@ -49,7 +49,7 @@ SoundTouch is a web application that allows users to listen to songs that touch,
 
 
 
-#### [Frontend Routes](
+#### [Frontend Routes]
 # User-facing routes
 ## `/user/login`
 ### Log in Page
