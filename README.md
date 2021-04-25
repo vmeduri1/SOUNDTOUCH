@@ -47,7 +47,7 @@ SoundPop is a web application that allows users to listen to songs that are/or w
 #### [Database Schema](https://github.com/vmeduri1/soundWave/wiki/Database-Schema)
 <img width="300" alt="Screen Shot 2021-04-25 at 1 23 03 PM" src="https://user-images.githubusercontent.com/71046664/116004680-6d8e8b80-a5c9-11eb-83b1-40d23aeb575f.png">
 
-### Frontend Routes
+#### [Frontend Routes](
 # User-facing routes
 ## `/user/login`
 ### Log in Page
