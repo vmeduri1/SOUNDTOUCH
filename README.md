@@ -48,7 +48,6 @@ SoundTouch is a web application that allows users to listen to songs that touch,
 <img width="312" alt="Screen Shot 2021-04-25 at 5 30 55 PM" src="https://user-images.githubusercontent.com/71046664/116011761-4eedbc00-a5ec-11eb-8c00-61aa3783afcd.png">
 
 
-
 #### [Frontend Routes](
 # User-facing routes
 ## `/user/login`
