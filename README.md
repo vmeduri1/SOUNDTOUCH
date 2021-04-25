@@ -71,4 +71,6 @@ This page displays the most recent songs with their artist and album cover, as w
 
 ## `/upload`
 This page sets the user up to upload a song with a given audio file, requiring a Title. 
+* `GET /upload`
+* `POST /upload`
 
