@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
+import SuperheroLogo from './superheroLogo.png';
 
 function Navigation({ isLoaded }){
     const sessionUser = useSelector(state => state.session.user);
@@ -11,24 +12,41 @@ function Navigation({ isLoaded }){
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <ProfileButton user={sessionUser} />
+            <>
+                <div className="nav-item nav-links-container">
+                        <NavLink className= "nav-link" to="/login" >Home</NavLink>
+                        <NavLink className= "nav-link" to="/signup">Upload</NavLink>
+                    </div>
+                <div className="nav-item user-profile-container">
+                    <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
+                </div>
+            </>
+
         );
     } else {
         sessionLinks = (
             <>
-                <NavLink to="/login">Log In</NavLink>
-                <NavLink to="/signup">Sign Up</NavLink>
+
+                <div className="nav-item nav-links-container">
+                    <NavLink className= "nav-link" to="/login" >Home</NavLink>
+                    <NavLink className= "nav-link" to="/signup">Upload</NavLink>
+                </div>
+                <div className="nav-item user-profile-container">
+                    <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
+                </div>
             </>
         );
     }
 
     return (
-        <ul>
-            <li>
-                <NavLink exact to="/">Home</NavLink>
-                {isLoaded && sessionLinks}
-            </li>
-        </ul>
+        <div className="navbar">
+            <div className="logo-image-container nav-item"><img className="logo-image" src={SuperheroLogo}/></div>
+            <div className="app-name nav-item">Sound Touch</div>
+            {isLoaded && sessionLinks}
+        </div>
+
+
+
     );
 }
 
