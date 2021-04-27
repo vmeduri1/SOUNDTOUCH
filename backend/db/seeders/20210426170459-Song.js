@@ -64,7 +64,7 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()},
         {name: 'Get Lucky',
-        artist: 'Daft Punk ft. Pharrell Williamss',
+        artist: 'Daft Punk ft. Pharrell Williams',
         image_url: 'https://upload.wikimedia.org/wikipedia/en/7/71/Get_Lucky.jpg',
         audio_url: 'Daft Punk - Get Lucky (Official Audio) ft. Pharrell Williams, Nile Rodgers.mp3',
         createdAt: new Date(),
