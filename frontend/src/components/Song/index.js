@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
+import songsReducer from '../../store/song';
 import './Song.css';
 
 function Song(song) {
     song = song.song
+    console.log(song);
+
+
 
 
     const handleClick = (e) => {
@@ -25,6 +29,7 @@ function Song(song) {
                     </audio>
                 </div>
             </div>
+
         </>
     )
 

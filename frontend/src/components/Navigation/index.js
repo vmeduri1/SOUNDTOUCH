@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import SuperheroLogo from './superheroLogo.png';
+import HeartLogo from './heart-logo.jpg';
 
 function Navigation({ isLoaded }){
     const sessionUser = useSelector(state => state.session.user);
@@ -15,7 +16,7 @@ function Navigation({ isLoaded }){
             <>
                 <div className="nav-item nav-links-container">
                         <NavLink className= "nav-link" to="/login" >Home</NavLink>
-                        <NavLink className= "nav-link" to="/signup">Upload</NavLink>
+                        <NavLink className= "nav-link" to="/upload">Upload</NavLink>
                     </div>
                 <div className="nav-item user-profile-container">
                     <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
@@ -40,8 +41,8 @@ function Navigation({ isLoaded }){
 
     return (
         <div className="navbar">
-            <div className="logo-image-container nav-item"><img className="logo-image" src={SuperheroLogo}/></div>
-            <div className="app-name nav-item">Sound Touch</div>
+            <div className="logo-image-container nav-item"><img className="logo-image" src={HeartLogo}/></div>
+            <div className="app-name nav-item">SoundTouch</div>
             {isLoaded && sessionLinks}
         </div>
 
