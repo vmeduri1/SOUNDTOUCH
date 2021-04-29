@@ -7,6 +7,7 @@ import SignupFormPage from "./components/SignupFormPage"
 import Navigation from './components/Navigation/';
 import HomePage from './components/HomePage';
 import Upload from './components/Uploads';
+import Footer from './components/Footer'
 
 function App() {
   const dispatch = useDispatch();
@@ -34,7 +35,7 @@ function App() {
             </Route>
         </Switch>
       )}
-    
+      <Footer/>
     </>
   );
 }
