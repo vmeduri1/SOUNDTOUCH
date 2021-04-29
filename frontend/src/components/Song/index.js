@@ -6,7 +6,7 @@ import ImageUpload from '../../components/HomePage/modalController';
 
 function Song(song) {
     song = song.song
-    console.log(song);
+    // console.log(song);
 
 
 

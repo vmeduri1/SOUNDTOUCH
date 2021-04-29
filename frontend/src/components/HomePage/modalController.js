@@ -8,7 +8,7 @@ function ImageUpload ({ props }) {
         <>
             <button onClick={() => {
                 setShowModal(!showModal)
-                console.log('yo whatup')
+                // console.log('yo whatup')
             }}>
                 Edit
             </button>

@@ -40,7 +40,7 @@ export const uploadSongs = (data) => async dispatch => {
     })
     if (res.ok) {
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         dispatch(add(data));
     }
 }
@@ -53,11 +53,11 @@ export const updateSong = (data) => async dispatch => {
         headers: { 'Content-Type': 'multipart/form-data' },
         body: formData
     })
-    console.log(formData);
-    console.log(data);
+    // console.log(formData);
+    // console.log(data);
     if (res.ok) {
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         dispatch(setUpdateSong(data));
     }
 }
@@ -74,7 +74,7 @@ const songsReducer = (state = initialState, action) => {
             };
         }
         case ADD_SONG: {
-            console.log(action.songs)
+            // console.log(action.songs)
             const allSongs = [...state.allSongs];
             allSongs.push(action.songs);
             return {

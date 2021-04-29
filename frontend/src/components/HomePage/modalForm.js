@@ -17,7 +17,7 @@ const ModalForm = ({ props }) => {
         e.preventDefault();
         if (image) {
             const data = {image, id};
-            console.log(image);
+            // console.log(image);
             dispatch(updateSong(data));
             setShowModal(false);
         }

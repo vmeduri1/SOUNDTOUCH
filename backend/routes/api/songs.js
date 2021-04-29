@@ -31,10 +31,10 @@ router.post('/upload', singleMulterUpload('file') , asyncHandler(async function(
 
 router.put('/update/:id', singleMulterUpload('image') , asyncHandler(async function(req, res) {
   // console.log('=====================');
-  console.log(req.file);
+  // console.log(req.file);
   // console.log(song);
   const image = await singlePublicImageUpload(req.file);
-  console.log(image);
+  // console.log(image);
   const song = await Song.findByPk(req.params.id);
   const newSong = await song.update({image_url: image.url})
   res.json(newSong);
