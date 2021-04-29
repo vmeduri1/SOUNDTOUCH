@@ -4,8 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
-import SuperheroLogo from './superheroLogo.png';
-import HeartLogo from './heart-logo.jpg';
+import Explosion from './explosion.png';
 
 function Navigation({ isLoaded }){
     const sessionUser = useSelector(state => state.session.user);
@@ -41,7 +40,7 @@ function Navigation({ isLoaded }){
 
     return (
         <div className="navbar">
-            <div className="logo-image-container nav-item"><img className="logo-image" src={HeartLogo}/></div>
+            <div className="logo-image-container nav-item"><img className="logo-image" src={Explosion}/></div>
             <div className="app-name nav-item">SoundTouch</div>
             {isLoaded && sessionLinks}
         </div>

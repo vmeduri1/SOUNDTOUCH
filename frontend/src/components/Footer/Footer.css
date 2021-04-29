@@ -9,6 +9,8 @@
     font-family: Helvetica;
     display: flex;
     justify-content: space-around;
+    height: 1em;
+
 }
 
 .vishaal-meduri {
@@ -20,10 +22,6 @@
     display: flex;
     margin: 0 35px;
 }
-
-/* .anchors.anchor1 {
-    margin: 0 10px;
-} */
 
 .anchors a {
     margin: 0 100px;
