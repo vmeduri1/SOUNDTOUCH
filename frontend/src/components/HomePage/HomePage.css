@@ -25,3 +25,17 @@ body, div, img, h3 {
     justify-content: center;
     align-items: center;
 }
+
+.image-update {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: 300px;
+    background-color: pink;
+    box-shadow: 4px 2px 4px 0px rgba(197,197,197, 0.671);
+    border-radius: 3px;
+}
