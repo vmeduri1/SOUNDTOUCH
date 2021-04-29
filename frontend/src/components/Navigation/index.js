@@ -4,8 +4,6 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
-import SuperheroLogo from './superheroLogo.png';
-import HeartLogo from './heart-logo.jpg';
 
 function Navigation({ isLoaded }){
     const sessionUser = useSelector(state => state.session.user);
@@ -13,41 +11,24 @@ function Navigation({ isLoaded }){
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <>
-                <div className="nav-item nav-links-container">
-                        <NavLink className= "nav-link" to="/login" >Home</NavLink>
-                        <NavLink className= "nav-link" to="/upload">Upload</NavLink>
-                    </div>
-                <div className="nav-item user-profile-container">
-                    <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
-                </div>
-            </>
-
+            <ProfileButton user={sessionUser} />
         );
     } else {
         sessionLinks = (
             <>
-
-                <div className="nav-item nav-links-container">
-                    <NavLink className= "nav-link" to="/login" >Home</NavLink>
-                    <NavLink className= "nav-link" to="/signup">Upload</NavLink>
-                </div>
-                <div className="nav-item user-profile-container">
-                    <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
-                </div>
+                <NavLink to="/login">Log In</NavLink>
+                <NavLink to="/signup">Sign Up</NavLink>
             </>
         );
     }
 
     return (
-        <div className="navbar">
-            <div className="logo-image-container nav-item"><img className="logo-image" src={HeartLogo}/></div>
-            <div className="app-name nav-item">SoundTouch</div>
-            {isLoaded && sessionLinks}
-        </div>
-
-
-
+        <ul>
+            <li>
+                <NavLink exact to="/">Home</NavLink>
+                {isLoaded && sessionLinks}
+            </li>
+        </ul>
     );
 }
 
