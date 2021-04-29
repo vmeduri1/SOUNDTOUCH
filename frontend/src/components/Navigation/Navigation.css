@@ -1,0 +1,47 @@
+.navbar {
+    display: flex;
+    width: 100vw;
+
+}
+
+.logo-image-container {
+    width: 10vw;
+}
+
+.logo-image {
+    width: 6rem;
+    height: 5rem;
+}
+
+.app-name {
+    background-color: #FF5800;
+    color: white;
+    font-size: 32px;
+    width: 30vw;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 2vw;
+    justify-content: center;
+    margin: 0;
+    font-family: Helvetica;
+}
+
+.nav-links-container {
+    display: flex;
+    background-color: #21242E;
+    width: 48vw;
+    justify-content: space-around;
+}
+
+.user-profile-container {
+    background-color: #21242E;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+}

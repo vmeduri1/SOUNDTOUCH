@@ -1,0 +1,27 @@
+body, div, img, h3 {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-master {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50em;
+    height: 100vh;
+}
+
+.home-page-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 32px;
+    justify-content: center;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
