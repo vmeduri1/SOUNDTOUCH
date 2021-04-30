@@ -21,6 +21,10 @@
     height: 20vh;
 }
 
+audio {
+    display: block;
+ }
+
 .song-name {
     display: inline-block;
     white-space: nowrap;

@@ -1,13 +1,21 @@
 // frontend/src/components/Navigation/index.js
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { NavLink, useHistory } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import Explosion from './explosion.png';
+import { logout  } from '../../store/session';
 
 function Navigation({ isLoaded }){
     const sessionUser = useSelector(state => state.session.user);
+    const dispatch = useDispatch();
+    const history = useHistory();
+
+    const handleLogout = () => {
+        dispatch(logout());
+        history.push('/login');
+    }
 
     let sessionLinks;
     if (sessionUser) {
@@ -16,11 +24,11 @@ function Navigation({ isLoaded }){
                 <div className="nav-item nav-links-container">
                         <NavLink className= "nav-link" to="/login" >Home</NavLink>
                         <NavLink className= "nav-link" to="/upload">Upload</NavLink>
-                    </div>
-                <div className="nav-item user-profile-container">
-                    <NavLink className= "nav-link" to="/login">Login</NavLink>
-                    <NavLink className="nav-link" to="/logout">/Logout</NavLink>
                 </div>
+                <div className="nav-item user-profile-container">
+                    <div className="logout-button" onClick={handleLogout}>Logout</div>
+                </div>
+
             </>
 
         );

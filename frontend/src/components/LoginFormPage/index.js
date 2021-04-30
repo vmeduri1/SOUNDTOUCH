@@ -25,6 +25,16 @@ function LoginFormPage() {
             });
     }
 
+    const demoSubmit = (e) => {
+        e.preventDefault();
+        const credential = "Demo-lition";
+        const password = "password";
+        return dispatch(sessionActions.login({ credential, password }))
+            .catch(async (res) => {
+                const data = await res.json();
+            })
+    }
+
     return (
         <form className="login-form" onSubmit={handleSubmit}>
             <ul>
@@ -49,6 +59,7 @@ function LoginFormPage() {
                 />
             </label>
             <button type="submit">Log In</button>
+            <button type="demo-submit" onClick={demoSubmit}> Demo Log In</button>
         </form>
     );
 }

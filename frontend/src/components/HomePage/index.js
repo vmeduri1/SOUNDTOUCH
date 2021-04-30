@@ -32,17 +32,11 @@ function Homepage() {
                 <div className="home-master">
                     {songs.map((song) => {
                         return (
-                            <Song song={song}/>
+                            <Song song={song} />
                         )
                     })}
                 </div>
             </div>
-            {/* <div className="audio-player-container">
-                <audio controls>
-                    <source src={activeSong}></source>
-                    {console.log(activeSong)}
-                </audio>
-            </div> */}
         </>
     )
 }

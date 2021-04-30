@@ -29,6 +29,15 @@
     font-family: Helvetica;
 }
 
+.logout-button:hover {
+    cursor: pointer;
+}
+
+.logout-button {
+    color: white;
+    font-size: 32px;
+}
+
 .nav-links-container {
     display: flex;
     background-color: #21242E;

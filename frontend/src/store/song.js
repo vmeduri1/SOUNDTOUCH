@@ -3,6 +3,7 @@ import { csrfFetch } from './csrf';
 const LOAD = 'songs/LOAD';
 const ADD_SONG = 'songs/ADD_SONG';
 const UPDATE_SONG = 'songs/UPDATE_SONG';
+const DELETE_SONG = '/songs/DELETE_SONG';
 
 const load = songs => ({
     type: LOAD,
@@ -11,6 +12,11 @@ const load = songs => ({
 
 const add = songs => ({
     type: ADD_SONG,
+    songs,
+})
+
+const deleteSong = songs => ({
+    type: DELETE_SONG,
     songs,
 })
 
@@ -28,7 +34,7 @@ export const getSongs = () => async dispatch => {
     }
 };
 
-export const uploadSongs = (data) => async dispatch => {
+export const uploadSongs = data => async dispatch => {
     const formData = new FormData();
     formData.append('file', data.file);
     formData.append('title', data.title);
@@ -59,6 +65,16 @@ export const updateSong = (data) => async dispatch => {
         const data = await res.json();
         // console.log(data);
         dispatch(setUpdateSong(data));
+    }
+}
+
+export const deleteUserSong = id => async dispatch => {
+    const res = await csrfFetch(`/api/songs/${id}`, {
+        method: 'DELETE',
+    })
+    if (res.ok) {
+        // const data = await res.json();
+        dispatch(deleteSong(id));
     }
 }
 
@@ -95,7 +111,20 @@ const songsReducer = (state = initialState, action) => {
                 allSongs
             }
         }
-
+        case DELETE_SONG: {
+            const allSongs = [...state.allSongs];
+            let index;
+            for (let i = 0; i < allSongs.length; i++) {
+                const current = allSongs[i];
+                if (current.id === action.songs.id) {
+                    index = i;
+                }
+            }
+            allSongs[index] = action.songs;
+            return {
+                allSongs
+            }
+        }
         default:
             return state;
     }

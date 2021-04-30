@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { updateSong } from '../../store/song';
+import { updateSong, deleteUserSong } from '../../store/song';
 
 const ModalForm = ({ props }) => {
     const [image, setImage] = useState(null);
@@ -13,11 +13,15 @@ const ModalForm = ({ props }) => {
         }
     }
 
+    const deleteSongDispatch = () => {
+        const removedSong = { id }
+        dispatch(deleteUserSong(removedSong));
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (image) {
             const data = {image, id};
-            // console.log(image);
             dispatch(updateSong(data));
             setShowModal(false);
         }
@@ -30,6 +34,7 @@ const ModalForm = ({ props }) => {
                 <input type="file" onChange={(e) => updateFile(e)}/>
             </label>
             <button type="submit">Update</button>
+            <button type="submit" onClick={deleteSongDispatch}>Delete</button>
         </form>
     )
 }

@@ -40,5 +40,12 @@ router.put('/update/:id', singleMulterUpload('image') , asyncHandler(async funct
   res.json(newSong);
 }))
 
+router.delete('/:id', asyncHandler(async function(req, res) {
+  const { id } = req.params;
+  const deletePhoto = await Song.findByPk(id);
+  await deletePhoto.destroy();
+  res.status(204).end();
+}))
+
 
 module.exports = router;
