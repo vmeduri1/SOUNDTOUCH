@@ -5,8 +5,8 @@ const Footer = () => {
         <div className="footer">
             <p>©SoundTouch</p>
             <p className="vishaal-meduri">Developer: Vishaal Meduri</p>
-            <a href='https://github.com/vmeduri1'>GitHub</a>
-            <a href='https://www.linkedin.com/in/vishaalmeduri/'>LinkedIn</a>
+            <a className="github-footer" href='https://github.com/vmeduri1'>GitHub</a>
+            <a className="linkedin-footer" href='https://www.linkedin.com/in/vishaalmeduri/'>LinkedIn</a>
          </div>
     )
 

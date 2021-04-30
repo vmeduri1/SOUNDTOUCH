@@ -18,7 +18,8 @@ function Navigation({ isLoaded }){
                         <NavLink className= "nav-link" to="/upload">Upload</NavLink>
                     </div>
                 <div className="nav-item user-profile-container">
-                    <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
+                    <NavLink className= "nav-link" to="/login">Login</NavLink>
+                    <NavLink className="nav-link" to="/logout">/Logout</NavLink>
                 </div>
             </>
 
@@ -28,11 +29,11 @@ function Navigation({ isLoaded }){
             <>
 
                 <div className="nav-item nav-links-container">
-                    <NavLink className= "nav-link" to="/login" >Home</NavLink>
-                    <NavLink className= "nav-link" to="/signup">Upload</NavLink>
+                    <NavLink className= "nav-link" to="/" >Home</NavLink>
+                    <NavLink className= "nav-link" to="/signup">Sign-Up</NavLink>
                 </div>
                 <div className="nav-item user-profile-container">
-                    <NavLink className= "nav-link" to="/user">vmeduri</NavLink>
+                    <NavLink className= "nav-link" to="/login">Login</NavLink>
                 </div>
             </>
         );

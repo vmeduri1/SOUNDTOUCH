@@ -10,10 +10,6 @@ const { User } = require('../../db/models');
 const router = express.Router();
 
 const validateSignup = [
-    check('email')
-      .exists({ checkFalsy: true })
-      .isEmail()
-      .withMessage('Please provide a valid email.'),
     check('username')
       .exists({ checkFalsy: true })
       .isLength({ min: 4 })

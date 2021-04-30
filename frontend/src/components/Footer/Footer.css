@@ -26,3 +26,21 @@
 .anchors a {
     margin: 0 100px;
 }
+
+/* a {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+} */
+
+.github-footer {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+}
+
+.linkedin-footer {
+    text-decoration: underline;
+    font-weight: bold;
+    color: black;
+}
