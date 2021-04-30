@@ -113,14 +113,9 @@ const songsReducer = (state = initialState, action) => {
         }
         case DELETE_SONG: {
             const allSongs = [...state.allSongs];
-            let index;
-            for (let i = 0; i < allSongs.length; i++) {
-                const current = allSongs[i];
-                if (current.id === action.songs.id) {
-                    index = i;
-                }
-            }
-            allSongs[index] = action.songs;
+            allSongs.filter((song) => {
+                return song.id === action.songs.id;
+            })
             return {
                 allSongs
             }
