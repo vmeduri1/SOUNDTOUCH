@@ -13,7 +13,9 @@ const ModalForm = ({ props }) => {
         }
     }
 
-    const deleteSongDispatch = () => {
+    const deleteSongDispatch = (e) => {
+        console.log('executed deleteSongDispatch');
+        e.preventDefault();
         const removedSong = { id }
         dispatch(deleteUserSong(removedSong));
     }

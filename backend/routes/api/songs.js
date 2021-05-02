@@ -40,7 +40,7 @@ router.put('/update/:id', singleMulterUpload('image') , asyncHandler(async funct
   res.json(newSong);
 }))
 
-router.delete('/:id', asyncHandler(async function(req, res) {
+router.delete('/delete/:id', asyncHandler(async function(req, res) {
   const { id } = req.params;
   const deletePhoto = await Song.findByPk(id);
   await deletePhoto.destroy();
