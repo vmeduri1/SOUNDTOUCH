@@ -76,3 +76,7 @@ This page sets the user up to upload a song with a given audio file, requiring a
 * `GET /upload`
 * `POST /upload`
 
+## `/upload`
+This page sets the user up to upload a song with a given audio file, requiring a Title. 
+* `DELETE /delete/:id`
+* (Need to refresh the page to delete.)
